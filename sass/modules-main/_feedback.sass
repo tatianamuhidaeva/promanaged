@@ -1,0 +1,173 @@
+.feedback
+  padding: 142px 0
+  &__title
+    margin-bottom: 109px
+    text-align: center
+  &__slider
+    position: relative
+    &::before
+      content: "\00AB"
+      position: absolute
+      z-index: -1
+      top: 20px
+      left: 50%
+      font-size: 280px
+      color: #dbdbdb
+      transform: translateX(-443px)
+    &::after
+      content: "\00BB"
+      position: absolute
+      z-index: -1
+      top: 155px
+      left: 50%
+      font-size: 280px
+      color: #dbdbdb
+      transform: translateX(268px)
+  &__btn
+    position: absolute
+    left: 50%
+    top: 27px
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2)
+    background: 
+      repeat: no-repeat
+      color: #ffffff
+      position: 50%
+      size: auto 19px
+    transition-duration: 0.2s
+    cursor: pointer
+    z-index: 2
+    &-prev
+      background-image: url('../img/slider__btn-prev.png')
+      transform: translate(-170px, 0)
+      &:hover
+        box-shadow: none
+        transform: translate(-170px, 1px)
+    &-next
+      background-image: url('../img/slider__btn-next.png')
+      transform: translate(120px, 0)
+      &:hover
+        box-shadow: none
+        transform: translate(120px, 1px)
+  &__item
+    width: 781px
+    margin: 0 auto
+    text-align: center
+  &__client
+    width: 225px
+    margin: 0 auto
+    margin-bottom: 30px
+    display: flex
+    flex-direction: column
+    align-items: center
+    &-photo
+      width: 115px
+      height: 115px
+      border-radius: 50%
+      margin-bottom: 10px
+      overflow: hidden
+      img
+        width: 115px
+        height: 115px
+        object-fit: cover
+    &-name
+      +regular
+      font-size: 14px
+      line-height: 1.5
+      strong
+        +bold
+        font-size: 18px
+  &__text
+    padding: 29px 32px
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2)
+    border-radius: 29px
+    background-color: #ffffff
+    +regular
+    font-size: 16px
+    line-height: 1.5
+    blockquote
+      padding: 0
+      margin: 0
+
+=media-md-feedback
+  .feedback
+    padding: 90px 0
+    &__title
+      margin-bottom: 69px
+    &__slider
+      &::before
+        top: 54px
+        font-size: 180px
+        line-height: 120px
+        transform: translateX(-279px)
+      &::after
+        top: 139px
+        font-size: 180px
+        line-height: 120px
+        transform: translateX(166px)
+    &__btn
+      top: 17px
+      width: 32px
+      height: 32px
+      background: 
+        size: auto 12px
+      &-prev
+        transform: translate(-107px, 0)
+        &:hover
+          transform: translate(-107px, 1px)
+      &-next
+        transform: translate(76px, 0)
+        &:hover
+          transform: translate(76px, 1px)
+    &__item
+      width: 493px
+    &__client
+      width: 145px
+      margin-bottom: 20px
+      &-photo
+        width: 72px
+        height: 72px
+        margin-bottom: 7px
+        img
+          width: 74px
+          height: 74px
+      &-name
+        font-size: 9px
+        strong
+          font-size: 11px
+    &__text
+      padding: 17px 32px
+      font-size: 10px
+
+
+=media-xs-feedback
+  .feedback
+    padding: 0px 0
+    &__title
+      max-width: 90%
+      margin-bottom: 39px
+    &__slider
+      &::before
+        display: none
+      &::after
+        display: none
+    &__item
+      width: auto
+    &__client
+      width: 165px
+      margin-bottom: 10px
+      &-photo
+        width: 72px
+        height: 72px
+        margin-bottom: 7px
+      &-name
+        font-size: 10px
+        strong
+          font-size: 12px
+    &__text
+      box-shadow: none
+      padding: 17px 10px
+      font-size: 10px
+

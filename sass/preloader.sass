@@ -1,0 +1,30 @@
+.preloader
+  position: fixed
+  height: 100%
+  width: 100%
+  left: 0
+  top: 0
+  z-index: 100
+  background-color: #fff
+  opacity: 1
+  visibility: visible
+  transition: 1s
+  &.done
+    opacity: 0
+    visibility: hidden
+  &__loader
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 75px
+    height: 75px
+    border-radius: 50%
+    border: 10px solid #77389f
+    border-top-color: green
+    animation: 2s spin infinite linear
+@keyframes spin
+  from
+    transform: translate(-50%, -50%) rotate(0deg)
+  to
+    transform: translate(-50%, -50%) rotate(360deg)

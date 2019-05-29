@@ -1,0 +1,411 @@
+.benefit
+  position: relative
+  padding: 36px 0 129px
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    z-index: -1
+    width: 867px
+    height: 100%
+    background: 
+      repeat: no-repeat
+      size: auto 100%
+  &__title
+    max-width: 500px
+    margin-bottom: 73px
+  &__sentence
+    width: 750px
+    padding: 36px 84px 52px
+    margin-bottom: 54px
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2)
+    border-radius: 29px
+    background:
+      color: #ffffff
+      repeat: no-repeat
+      image: $text-gradient
+      size: 49px 100%
+      position: left
+    &-title
+      margin-bottom: 35px
+      +bold
+      font-size: 24px
+    &-text
+      +regular
+      font-size: 16px
+      line-height: 1.5
+  &__discounts
+    display: flex
+    align-items: flex-start
+  &__discount
+    width: 210px
+    padding: 32px 55px 18px 22px
+    margin-right: 20px
+    border-radius: 29px
+    background:
+      color: #b01919
+      repeat: no-repeat
+      image: linear-gradient(-55deg, rgba(#ffffff,0.5) 0, rgba(#ffffff,0.5) 100%), linear-gradient(-55deg, #bc4e9c 0%, #f80759 100%)
+      size: 30px 100%, cover
+      position: right
+    color: #ffffff
+    &-title
+      margin-bottom: 12px
+      +bold
+      font-size: 20px
+      text-transform: uppercase
+    &-text
+      +regular
+      font-size: 16px
+  &__uptime
+    &-title
+      +bold
+      font-size: 16px
+  &__payments
+    display: flex
+    justify-content: space-around
+    align-items: center
+    margin-right: 47%
+    margin-top: 97px
+  &__payment
+    display: block
+    // margin-right: 40px
+    background: 
+      repeat: no-repeat
+      image: url('../img/sprites/sprite-money.png')
+      size: auto
+    &-visa
+      width: 77px
+      height: 25px
+      background: 
+        position: 0 -13px
+    &-mastercard
+      width: 70px
+      height: 41px
+      background: 
+        position: -77px -5px
+    &-webmoney
+      width: 136px
+      height: 36px
+      background: 
+        position: -147px -8px
+    &-yandex
+      width: 93px
+      height: 47px
+      background: 
+        position: -283px 0
+    &-bitcoin
+      width: 42px
+      height: 43px
+      margin-left: 10px
+      background: 
+        position: -376px -5px
+  &__searches
+    display: flex
+    justify-content: space-between
+    align-items: center
+    align-content: space-between
+    flex-wrap: wrap
+    width: 331px
+    height: 157px
+    margin-top: 112px
+    margin-left: 67px
+  &__search
+    background: 
+      repeat: no-repeat
+      image: url('../img/sprites/sprite-search.png')
+      size: auto
+    &-google
+      width: 118px
+      height: 41px
+      background: 
+        position: 0 0
+    &-yandex
+      width: 101px
+      height: 41px
+      background: 
+        position: -118px 0
+    &-bing
+      width: 115px
+      height: 43px
+      background: 
+        position: 0 -41px
+    &-yahoo
+      width: 128px
+      height: 35px
+      background: 
+        position: -118px -41px
+  
+  &.benefit-first
+    &::after
+      background: 
+        image: url('../img/1.jpg')
+  &.benefit-second
+    &::after
+      background: 
+        image: url('../img/2.jpg')
+  &.benefit-third
+    padding-top: 131px
+    padding-bottom: 180px
+    &::after
+      background: 
+        image: url('../img/3.jpg')
+  &.benefit-fourth
+    &::after
+      background: 
+        image: url('../img/4.jpg')
+.benefit:nth-of-type(2n-1)
+  &::after
+    left: 50%
+    background: 
+      position: left
+    transform: translateX(112px)
+.benefit:nth-of-type(2n)
+  padding-top: 68px
+  padding-left: calc(50% - 80px)
+  &::after
+    right: 50%
+    background: 
+      position: right
+    transform: translateX(-112px)
+  .benefit
+    &__sentence
+      margin-left: -195px
+
+=media-md-benefit
+  .benefit
+    padding: 22px 0 82px
+    &__title
+      max-width: 315px
+      margin-bottom: 47px
+    &__sentence
+      width: 473px
+      padding: 23px 53px 29px
+      margin-bottom: 34px
+      background:
+        size: 32px 100%
+      &-title
+        margin-bottom: 18px
+        font-size: 16px
+      &-text
+        font-size: 10px
+        line-height: 1.5
+    &__discount
+      width: 132px
+      padding: 20px 25px 16px 15px
+      margin-right: 12px
+      background:
+        size: 20px 100%, cover
+      &-title
+        margin-bottom: 5px
+        font-size: 12px
+      &-text
+        font-size: 10px
+    &__uptime
+      &-title
+        font-size: 10px
+    &__payments
+      margin-right: 45%
+      margin-top: 57px
+    &__payment
+      background: 
+        size: 273px auto
+      &-visa
+        width: 50px
+        height: 18px
+        background: 
+          position: 0 -8px
+      &-mastercard
+        width: 45px
+        height: 30px
+        background: 
+          position: -50px 0
+      &-webmoney
+        width: 89px
+        height: 23px
+        background: 
+          position: -95px -5px
+      &-yandex
+        width: 62px
+        height: 30px
+        background: 
+          position: -184px 0
+      &-bitcoin
+        width: 28px
+        height: 31px
+        margin-left: 6px
+        background: 
+          position: -245px 0px
+    &__searches
+      width: 210px
+      height: 99px
+      margin-top: 72px
+      margin-left: 58px
+    &__search
+      background: 
+        size: 155px auto
+      &-google
+        width: 74px
+        height: 26px
+        background: 
+          position: 0 0
+      &-yandex
+        width: 63px
+        height: 26px
+        background: 
+          position: -75px 0
+      &-bing
+        width: 75px
+        height: 27px
+        background: 
+          position: 0 -26px
+      &-yahoo
+        width: 81px
+        height: 22px
+        background: 
+          position: -75px -26px
+    &.benefit-third
+      padding-top: 80px
+      padding-bottom: 115px
+    &.benefit-fourth
+
+  .benefit:nth-of-type(2n-1)
+    &::after
+      transform: translateX(79px)
+  .benefit:nth-of-type(2n)
+    padding-top: 44px
+    padding-left: calc(50% - 80px)
+    &::after
+      transform: translateX(-79px)
+    .benefit
+      &__sentence
+        margin-left: -107px
+=media-xs-benefit
+  .benefit
+    position: relative
+    &::after
+      left: 0
+      right: 0
+      width: 100%
+      background-size: cover
+    &__title
+      position: absolute
+      top: -122px
+      max-width: 315px
+      margin-bottom: 0
+    &__sentence
+      margin: 0
+      position: absolute
+      top: -21px
+      right: -1px
+      width: 292px
+      padding: 10px 20px 15px 40px
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+      background:
+        size: 24px 100%
+      &-title
+        font-size: 14px
+        margin-bottom: 8px
+    &__discount
+      width: 91px
+      padding: 12px 21px 11px 9px
+      &-title
+        font-size: 9px
+      &-text
+        font-size: 8px
+    &__uptime
+      &-title
+        font-size: 12px
+    &-block
+      position: absolute
+      top: 290px
+    &__payments
+      width: 95%
+      margin: 0
+    &__payment
+      background: 
+        size: 213px auto
+      &-visa
+        width: 39px
+        height: 13px
+        background: 
+          position: 0 -6px
+      &-mastercard
+        width: 36px
+        height: 24px
+        background: 
+          position: -39px 0
+      &-webmoney
+        width: 69px
+        height: 20px
+        background: 
+          position: -74px -3px
+      &-yandex
+        width: 48px
+        height: 23px
+        background: 
+          position: -144px 0
+      &-bitcoin
+        width: 22px
+        height: 25px
+        margin-left: 6px
+        background: 
+          position: -191px 0px
+    &__searches
+      width: 95%
+      height: auto
+      margin: 0
+    &__search
+      background: 
+        size: 125px auto
+      &-google
+        width: 60px
+        height: 21px
+        background: 
+          position: 0 0
+      &-yandex
+        width: 52px
+        height: 20px
+        background: 
+          position: -60px 0
+      &-bing
+        width: 58px
+        height: 22px
+        background: 
+          position: 0 -21px
+      &-yahoo
+        width: 65px
+        height: 18px
+        background: 
+          position: -60px -22px
+    &.benefit-first
+      margin-top: 97px
+      padding: 115px 0
+    &.benefit-second
+      padding: 100px 0
+      &::after
+        display: none
+      .benefit__sentence
+        top: -70px
+    &.benefit-third
+      padding: 137px 0
+      margin-bottom: 105px
+      .benefit__sentence
+        top: -43px
+    &.benefit-fourth
+      padding: 137px 0
+      margin-bottom: 100px
+
+  .benefit:nth-of-type(2n-1)
+    &::after
+      left: 0
+      right: 0
+      transform: none
+  .benefit:nth-of-type(2n)
+    .benefit__sentence
+      margin-left: 0
+    &::after
+      left: 0
+      right: 0
+      transform: none
