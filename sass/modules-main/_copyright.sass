@@ -1,0 +1,23 @@
+.copyright
+  padding: 12px 0
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +regular
+    font-size: 10px
+    text-transform: uppercase
+=media-md-copyright
+  .copyright
+    padding: 7px 0
+    &-wrap
+      font-size: 6px
+=media-xs-copyright
+  .copyright
+    padding: 16px 0
+    &-wrap
+      flex-direction: column
+      font-size: 10px
+    &__elem:not(:last-child)
+      margin-bottom: 15px
+

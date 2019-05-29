@@ -16,7 +16,7 @@
     margin-bottom: 73px
   &__sentence
     width: 750px
-    padding: 36px 84px 52px
+    padding: 36px 84px 41px
     margin-bottom: 54px
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2)
     border-radius: 29px
@@ -58,9 +58,18 @@
       +regular
       font-size: 16px
   &__uptime
+    margin-top: 90px
+    margin-bottom: 30px
+
     &-title
       +bold
       font-size: 16px
+      margin-bottom: 40px
+    &-iframe
+      width: 559px
+      height: 202px
+
+
   &__payments
     display: flex
     justify-content: space-around
@@ -141,6 +150,7 @@
       background: 
         image: url('../img/1.jpg')
   &.benefit-second
+    padding-bottom: 2px
     &::after
       background: 
         image: url('../img/2.jpg')
@@ -202,8 +212,14 @@
       &-text
         font-size: 10px
     &__uptime
+      margin-top: 55px
+      margin-bottom: 0
       &-title
         font-size: 10px
+        margin-bottom: 16px
+      &-iframe
+        width: 352px
+        height: 202px
     &__payments
       margin-right: 45%
       margin-top: 57px
@@ -315,8 +331,16 @@
       &-text
         font-size: 8px
     &__uptime
+      margin-top: 55px
+      margin-bottom: 0
       &-title
         font-size: 12px
+        margin-bottom: 16px
+      &-iframe
+        width: 352px
+        height: 202px
+        transform: scale(0.8)
+        transform-origin: 0 0
     &-block
       position: absolute
       top: 290px
@@ -383,7 +407,7 @@
       margin-top: 97px
       padding: 115px 0
     &.benefit-second
-      padding: 100px 0
+      padding: 2px 0
       &::after
         display: none
       .benefit__sentence
