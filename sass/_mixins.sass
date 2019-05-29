@@ -2,3 +2,697 @@
   font-family: 'SFUIDisplay-Regular' , sans-serif
 =bold
   font-family: 'SFUIDisplay-Bold' , sans-serif
+
+
+=media-md-index  
+  .section__title
+    font-size: 30px
+=media-xs-index  
+  .section__title
+    font-size: 24px
+
+=media-md-navbar
+  .navbar
+    &__logo
+      img
+        width: 131px
+        height: 49px  
+    &__menu
+      margin-top: -6px
+      margin-right: 30px
+    &__items
+      margin: 0 53px
+    &__item
+      a 
+        font-size: 9px
+    &-contacts
+      padding-top: 15px
+      &__phone
+        font-size: 10px
+      &__email
+        font-size: 8px
+
+=media-xs-navbar
+  .fullversion
+    display: block
+  .navbar
+    // position: relative
+    padding: 15px 17px 12px 22px
+    background-color: #2d125f
+    &__logo
+      display: none
+    &__menu
+      flex-grow: 0
+      margin-top: 0
+      margin-right: 0
+    &__toggle
+      display: block   
+      position: relative
+      height: 25px
+      width: 35px
+      cursor: pointer
+      &-i
+        width: 35px
+        height: 5px
+        background-color: #fff
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translate(0, -50%)
+      &::before
+        content: ""
+        width: 35px
+        height: 5px
+        background-color: #fff
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translate(0, -250%)
+      &::after
+        content: ""
+        width: 35px
+        height: 5px
+        background-color: #fff
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translate(0, 150%)  
+      &:hover
+        cursor: pointer
+      &:hover &-i, 
+        background-color: #f9034e  
+      &:hover::before
+        background-color: #f9034e  
+      &:hover::after
+        background-color: #f9034e  
+    &__items
+      padding: 20px 32px 30px
+      position: absolute
+      z-index: 10
+      top: 90px
+      left: 0
+      margin: 0
+      flex-direction: column
+      background-color: #1c0841
+      transform: translate(-100%, 0)
+      transition-duration: 0.4s
+      >.navbar-contacts
+        display: block
+    &__item
+      a 
+        display: block
+        border-bottom: 1px solid #583caa
+        width: 231px
+        font-size: 14px
+        line-height: 50px
+    &-contacts
+      text-align: left 
+      &__phone
+        font-size: 16px
+      &__email
+        font-size: 16px
+        line-height: 30px
+=media-md-main
+  .main
+    padding: 86px 0 60px
+    &__title
+      font-size: 28px
+      margin-bottom: 48px
+    &__positives
+      padding-left: 18px
+    &__positive
+      font-size: 10px
+      margin-bottom: 14px
+      &::before
+        left: -18px
+        top: 2px
+        width: 8px
+        height: 9px
+=media-xs-main
+  .main
+    padding: 30px 0 32px
+    &__logo
+      display: block
+      text-align: center
+      margin-bottom: 19px
+      img
+        width: 210px
+        height: 77px  
+    &__title
+      font-size: 24px
+      text-align: center
+      margin-bottom: 29px
+    &__positives
+      padding-left: 18px
+      max-width: 280px
+      margin: 0 auto
+    &__positive
+      font-size: 14px
+      margin-bottom: 14px
+      &::before
+        left: -18px
+        top: 2px
+        width: 10px
+        height: 12px
+
+=media-md-price
+  .price
+    margin-bottom: 80px
+    &__items
+      padding: 23px 24px 8px 20px
+    &__item
+      padding: 18px 10px 20px 65px
+      width: 32%
+      &::before
+        top: 20px
+        left: 23px
+        width: 22px
+        height: 25px
+        background-size: 68px auto
+      &:nth-of-type(1)
+        &::before
+          background-position: 0 0
+      &:nth-of-type(2)
+        &::before
+          background-position: -22px 0
+      &:nth-of-type(3)
+        &::before
+          width: 25px
+          background-position: -44px 0
+      &:nth-of-type(4)
+        &::before
+          background-position: 0 -25px
+      &:nth-of-type(5)
+        &::before
+          width: 24px
+          background-position: -22px -25px
+      &:nth-of-type(6)
+        &::before
+          width: 23px
+          background-position: -45px -25px
+      &-title
+        font-size: 10px
+        margin-bottom: 9px
+      &-desc
+        font-size: 9px
+        margin-bottom: 14px
+      &-cost
+        font-size: 10px
+        margin-bottom: 8px
+      &-more
+        font-size: 9px
+        padding-bottom: 1px
+        background: 
+          size: 3px 1px
+          image: linear-gradient(to right, $primary-color 0, $primary-color 1px, transparent 1px, transparent 100%)
+=media-xs-price
+  .price
+    background-color: #fff
+    margin-bottom: 0
+    &__items
+      padding: 52px 0
+      box-shadow: none
+    &__item
+      padding: 61px 8px 18px
+      width: 50%
+      &::before
+        top: 0px
+        left: 15px
+        width: 34px
+        height: 39px
+        background-size: auto 
+      &:nth-of-type(1)
+        border: none
+        &::before
+          background-position: 0 0
+      &:nth-of-type(2)
+        border: none
+        &::before
+          background-position: -34px 0
+      &:nth-of-type(3)
+        border: none
+        &::before
+          width: 39px
+          background-position: -69px 0
+      &:nth-of-type(4)
+        border: none
+        &::before
+          background-position: 0 -40px
+      &:nth-of-type(5)
+        border: none
+        &::before
+          width: 36px
+          background-position: -34px -40px
+      &:nth-of-type(6)
+        border: none
+        &::before
+          width: 37px
+          background-position: -71px -40px
+      &-title
+        font-size: 12px
+        margin-bottom: 14px
+      &-desc
+        font-size: 12px
+        margin-bottom: 14px
+      &-cost
+        font-size: 14px
+        margin-bottom: 16px
+      &-more
+        font-size: 14px
+        padding-bottom: 1px
+        background: 
+          size: 3px 1px
+          image: linear-gradient(to right, $primary-color 0, $primary-color 1px, transparent 1px, transparent 100%)
+
+
+=media-md-benefit
+  .benefit
+    padding: 22px 0 82px
+    &__title
+      max-width: 315px
+      margin-bottom: 47px
+    &__sentence
+      width: 473px
+      padding: 23px 53px 29px
+      margin-bottom: 34px
+      background:
+        size: 32px 100%
+      &-title
+        margin-bottom: 18px
+        font-size: 16px
+      &-text
+        font-size: 10px
+        line-height: 1.5
+    &__discount
+      width: 132px
+      padding: 20px 25px 16px 15px
+      margin-right: 12px
+      background:
+        size: 20px 100%, cover
+      &-title
+        margin-bottom: 5px
+        font-size: 12px
+      &-text
+        font-size: 10px
+    &__uptime
+      margin-top: 55px
+      margin-bottom: 0
+      &-title
+        font-size: 10px
+        margin-bottom: 16px
+      &-iframe
+        width: 352px
+        height: 202px
+    &__payments
+      margin-right: 45%
+      margin-top: 57px
+    &__payment
+      background: 
+        size: 273px auto
+      &-visa
+        width: 50px
+        height: 18px
+        background: 
+          position: 0 -8px
+      &-mastercard
+        width: 45px
+        height: 30px
+        background: 
+          position: -50px 0
+      &-webmoney
+        width: 89px
+        height: 23px
+        background: 
+          position: -95px -5px
+      &-yandex
+        width: 62px
+        height: 30px
+        background: 
+          position: -184px 0
+      &-bitcoin
+        width: 28px
+        height: 31px
+        margin-left: 6px
+        background: 
+          position: -245px 0px
+    &__searches
+      width: 210px
+      height: 99px
+      margin-top: 72px
+      margin-left: 58px
+    &__search
+      background: 
+        size: 155px auto
+      &-google
+        width: 74px
+        height: 26px
+        background: 
+          position: 0 0
+      &-yandex
+        width: 63px
+        height: 26px
+        background: 
+          position: -75px 0
+      &-bing
+        width: 75px
+        height: 27px
+        background: 
+          position: 0 -26px
+      &-yahoo
+        width: 81px
+        height: 22px
+        background: 
+          position: -75px -26px
+    &.benefit-third
+      padding-top: 80px
+      padding-bottom: 115px
+    &.benefit-fourth
+
+  .benefit:nth-of-type(2n-1)
+    &::after
+      transform: translateX(79px)
+  .benefit:nth-of-type(2n)
+    padding-top: 44px
+    padding-left: calc(50% - 80px)
+    &::after
+      transform: translateX(-79px)
+    .benefit
+      &__sentence
+        margin-left: -107px
+=media-xs-benefit
+  .benefit
+    position: relative
+    &::after
+      left: 0
+      right: 0
+      width: 100%
+      background-size: cover
+    &__title
+      position: absolute
+      top: -122px
+      max-width: 315px
+      margin-bottom: 0
+    &__sentence
+      margin: 0
+      position: absolute
+      top: -21px
+      right: -1px
+      width: 292px
+      padding: 10px 20px 15px 40px
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+      background:
+        size: 24px 100%
+      &-title
+        font-size: 14px
+        margin-bottom: 8px
+    &__discount
+      width: 91px
+      padding: 12px 21px 11px 9px
+      &-title
+        font-size: 9px
+      &-text
+        font-size: 8px
+    &__uptime
+      margin-top: 55px
+      margin-bottom: 0
+      &-title
+        font-size: 12px
+        margin-bottom: 16px
+      &-iframe
+        width: 352px
+        height: 202px
+        transform: scale(0.8)
+        transform-origin: 0 0
+    &-block
+      position: absolute
+      top: 290px
+    &__payments
+      width: 95%
+      margin: 0
+    &__payment
+      background: 
+        size: 213px auto
+      &-visa
+        width: 39px
+        height: 13px
+        background: 
+          position: 0 -6px
+      &-mastercard
+        width: 36px
+        height: 24px
+        background: 
+          position: -39px 0
+      &-webmoney
+        width: 69px
+        height: 20px
+        background: 
+          position: -74px -3px
+      &-yandex
+        width: 48px
+        height: 23px
+        background: 
+          position: -144px 0
+      &-bitcoin
+        width: 22px
+        height: 25px
+        margin-left: 6px
+        background: 
+          position: -191px 0px
+    &__searches
+      width: 95%
+      height: auto
+      margin: 0
+    &__search
+      background: 
+        size: 125px auto
+      &-google
+        width: 60px
+        height: 21px
+        background: 
+          position: 0 0
+      &-yandex
+        width: 52px
+        height: 20px
+        background: 
+          position: -60px 0
+      &-bing
+        width: 58px
+        height: 22px
+        background: 
+          position: 0 -21px
+      &-yahoo
+        width: 65px
+        height: 18px
+        background: 
+          position: -60px -22px
+    &.benefit-first
+      margin-top: 97px
+      padding: 115px 0
+    &.benefit-second
+      padding: 2px 0
+      &::after
+        display: none
+      .benefit__sentence
+        top: -70px
+    &.benefit-third
+      padding: 137px 0
+      margin-bottom: 105px
+      .benefit__sentence
+        top: -43px
+    &.benefit-fourth
+      padding: 137px 0
+      margin-bottom: 100px
+
+  .benefit:nth-of-type(2n-1)
+    &::after
+      left: 0
+      right: 0
+      transform: none
+  .benefit:nth-of-type(2n)
+    .benefit__sentence
+      margin-left: 0
+    &::after
+      left: 0
+      right: 0
+      transform: none
+
+
+=media-md-feedback
+  .feedback
+    padding: 90px 0
+    &__title
+      margin-bottom: 69px
+    &__slider
+      &::before
+        top: 54px
+        font-size: 180px
+        line-height: 120px
+        transform: translateX(-279px)
+      &::after
+        top: 139px
+        font-size: 180px
+        line-height: 120px
+        transform: translateX(166px)
+    &__btn
+      top: 17px
+      width: 32px
+      height: 32px
+      background: 
+        size: auto 12px
+      &-prev
+        transform: translate(-107px, 0)
+        &:hover
+          transform: translate(-107px, 1px)
+      &-next
+        transform: translate(76px, 0)
+        &:hover
+          transform: translate(76px, 1px)
+    &__item
+      width: 493px
+    &__client
+      width: 145px
+      margin-bottom: 20px
+      &-photo
+        width: 72px
+        height: 72px
+        margin-bottom: 7px
+        img
+          width: 74px
+          height: 74px
+      &-name
+        font-size: 9px
+        strong
+          font-size: 11px
+    &__text
+      padding: 17px 32px
+      font-size: 10px
+
+
+=media-xs-feedback
+  .feedback
+    padding: 0px 0
+    &__title
+      max-width: 90%
+      margin-bottom: 39px
+    &__slider
+      &::before
+        display: none
+      &::after
+        display: none
+    &__item
+      width: auto
+    &__client
+      width: 165px
+      margin-bottom: 10px
+      &-photo
+        width: 72px
+        height: 72px
+        margin-bottom: 7px
+      &-name
+        font-size: 10px
+        strong
+          font-size: 12px
+    &__text
+      box-shadow: none
+      padding: 17px 10px
+      font-size: 10px
+
+
+=media-md-partners
+  .partners
+    padding: 19px 0 35px
+    &__title
+      margin-bottom: 35px
+      font-size: 18px
+    &__icon:not(:last-of-type)
+      margin-right: 50px
+      
+=media-xs-partners
+  .partners
+    padding: 19px 0 63px
+    &__title
+      margin-bottom: 35px
+      font-size: 24px
+    &__icons
+      flex-wrap: wrap
+    &__icon
+      flex-basis: 50%
+      margin-bottom: 10px
+      text-align: center
+      // flex-grow: 1
+      &:not(:last-of-type)
+        margin-right: 0px
+      &:nth-of-type(1) img
+        width: 100px
+      &:nth-of-type(2) img
+        width: 69px
+      &:nth-of-type(3) img
+        width: 36px
+      &:nth-of-type(4) img
+        width: 57px
+      &:nth-of-type(5) img
+        width: 69px
+=media-md-footer
+  .footer
+    padding: 60px 0
+    &__logo
+      img
+        width: 131px
+        height: 49px  
+    &-logo
+      &>span
+        font-size: 6px
+        margin-top: -7px
+    &-navs
+      min-height: 46px      
+    &__nav
+      font-size: 9px
+    &__phone
+      font-size: 16px
+      margin-bottom: 5px
+    &__mail
+      font-size: 9px
+=media-xs-footer
+  .footer
+    padding: 15px 0
+    &-wrap
+      min-height: 270px
+      flex-direction: column
+    &__logo
+      img
+        width: 210px
+        height: 77px  
+    &-logo
+      margin-bottom: 32px
+      &>span
+        margin-top: -19px
+        font-size: 9px
+        text-align: center
+    &-navs
+      min-height: auto
+      flex-direction: column
+    &__nav
+      font-size: 12px
+      margin-bottom: 20px
+    &-contacts
+      text-align: center
+    &__phone
+      font-size: 15px
+      margin-bottom: 5px
+    &__mail
+      font-size: 12px
+
+=media-md-copyright
+  .copyright
+    padding: 7px 0
+    &-wrap
+      font-size: 6px
+=media-xs-copyright
+  .copyright
+    padding: 16px 0
+    &-wrap
+      flex-direction: column
+      font-size: 10px
+    &__elem:not(:last-child)
+      margin-bottom: 15px

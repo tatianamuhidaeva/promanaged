@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
   new WOW().init();
-
+  let isMobile = true;
      // -----Control Toggle Menu----
   let body = document.querySelector('body'),
     menu = document.querySelector('.navbar__items'),
@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   body.addEventListener("click", function (e) {
-    if (window.innerWidth <= 660) {
+    if ((window.innerWidth <= 660) && isMobile) {
       if (new WebKitCSSMatrix(getComputedStyle(menu).webkitTransform).m41 >= 0) {
         if (!parentsOfElements(e.target, "navbar__items") &&
           !e.target.classList.contains("navbar__toggle")) {
@@ -51,10 +51,16 @@ window.addEventListener('DOMContentLoaded', function () {
       //Remove transform property from menu
       menu.style.transform = "";
     } 
-    // else {
-      //replace Benefit-block
-      // dividedBenefits();
-    // }
   });
 
+
+  //Remove XS-Style
+  let btnFullVersion = document.querySelector('.fullversion__btn');
+  btnFullVersion.addEventListener('click', function(){
+    console.log(document.styleSheets);
+    document.styleSheets[5].disabled = true;
+    isMobile = false;
+    document.body.style.width = "760px";
+    document.body.style.overflowX = "visible";
+  });
 });
