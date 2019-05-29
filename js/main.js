@@ -1,7 +1,9 @@
 window.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
-  // -----Control Toggle Menu----
+  new WOW().init();
+
+     // -----Control Toggle Menu----
   let body = document.querySelector('body'),
     menu = document.querySelector('.navbar__items'),
     btnToggle = document.querySelector('.navbar__toggle');
