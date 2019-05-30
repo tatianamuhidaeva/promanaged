@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -357,12 +358,12 @@ template {
 
 body {
   font-family: 'SFUIDisplay-Regular' , sans-serif;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   color: #333333;
   background-repeat: no-repeat;
   background-position: 50% 0;
-  background-image: url("../img/bg-main.jpg");
-  background-size: auto 772px;
+  background-image: url("../img/bg-pages.jpg");
+  background-size: auto;
   overflow-x: hidden;
 }
 
@@ -488,6 +489,210 @@ a {
   margin-top: 2px;
 }
 
+.server {
+  padding: 50px 0;
+}
+
+.server__title {
+  margin-bottom: 30px;
+}
+
+.server__title::after {
+  content: "";
+  width: 751px;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+
+.server__table {
+  margin-bottom: 50px;
+}
+
+.server__price {
+  display: block;
+  font-family: 'SFUIDisplay-Bold' , sans-serif;
+  font-size: 22px;
+  color: #2045e4;
+}
+
+.server__unit {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.server__btn {
+  width: 166px;
+}
+
+.server__select {
+  position: relative;
+  text-transform: uppercase;
+}
+
+.server__select-radio {
+  display: none;
+}
+
+.server__select-arrow {
+  position: absolute;
+  left: 115px;
+  top: 18px;
+  width: 0px;
+  height: 0px;
+  border-top: 3px solid #c2185b;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 3px solid transparent;
+  -webkit-transform-origin: 50% 1px;
+          transform-origin: 50% 1px;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.server__select-wrap {
+  display: none;
+  position: absolute;
+  left: 18px;
+  top: 34px;
+  width: 120px;
+  z-index: 10;
+  padding: 8px 13px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 38px rgba(0, 0, 0, 0.47);
+          box-shadow: 0 0 38px rgba(0, 0, 0, 0.47);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.server__select-wrap .server__select-option {
+  display: block;
+  padding: 5px 0;
+  border-bottom: 1px solid #e3e3e3;
+  cursor: pointer;
+}
+
+.server__select-wrap .server__select-option:last-child {
+  border-bottom: 0;
+}
+
+.server__select-wrap .server__select-option:hover {
+  color: #c2185b;
+}
+
+.btn {
+  height: 35px;
+  border-radius: 2px;
+  background-color: #c2185b;
+  border: 0;
+  outline: none;
+  font-family: 'SFUIDisplay-Regular' , sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.col:first-child {
+  -ms-flex-preferred-size: 2;
+      flex-basis: 2;
+}
+
+.cell {
+  padding: 12px 20px 14px;
+  display: table-cell;
+  height: 40px;
+  font-family: 'SFUIDisplay-Regular' , sans-serif;
+  font-size: 14px;
+  color: #333333;
+  vertical-align: middle;
+}
+
+.cell:first-child {
+  font-family: 'SFUIDisplay-Bold' , sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.cell:nth-child(2n+1) {
+  background-color: #fff;
+}
+
+.cell:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.cell-price {
+  height: auto;
+}
+
+.popular {
+  position: relative;
+  z-index: 2;
+  -webkit-box-shadow: 0 0 29px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 29px rgba(0, 0, 0, 0.3);
+}
+
+.popular:before {
+  content: "популярное";
+  display: block;
+  padding: 5px 7px;
+  position: absolute;
+  right: -8px;
+  top: 10px;
+  background-color: #c2185b;
+  font-family: 'SFUIDisplay-Bold' , sans-serif;
+  text-transform: uppercase;
+  font-size: 8px;
+  color: #fff;
+  line-height: 8px;
+}
+
+.popular:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -8px;
+  top: 28px;
+  height: 0;
+  width: 0;
+  border: 4px solid #800d3a;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.popular .row {
+  background-color: #fff;
+}
+
 .footer {
   padding: 90px 0;
   background-color: #77389f;
@@ -587,4 +792,4 @@ a {
   font-size: 10px;
   text-transform: uppercase;
 }
-/*# sourceMappingURL=price.css.map */
+/*# sourceMappingURL=server.css.map */

@@ -62,5 +62,39 @@ window.addEventListener('DOMContentLoaded', function () {
     isMobile = false;
     document.body.style.width = "760px";
     document.body.style.overflowX = "visible";
+    menu.style.transform = "";
+    isMobile = false;
   });
+
+  //select period on Server
+  let selects = document.querySelectorAll('.server__select');
+  selects.forEach(elem => {
+    elem.addEventListener('click', function(e){
+      let optionWrap = e.currentTarget.querySelector('.server__select-wrap'),
+      arrow = e.currentTarget.querySelector('.server__select-arrow');
+      if (getComputedStyle(optionWrap).display == "none"){
+        optionWrap.style.display = "block";
+        arrow.style.transform = "rotate(180deg)";
+      } else {
+        optionWrap.style.display = "none";
+        arrow.style.transform = "";
+      }
+    });
+  });
+  
+  let optionWraps = document.querySelectorAll('.server__select-wrap');
+
+  optionWraps.forEach(wrap => {
+    wrap.addEventListener('click', function(e){
+      let select = this.parentElement;
+      let currOpt = this.previousElementSibling;
+      let target = e.target;
+
+      if(target && target.tagName == "LABEL"){
+        wrap.insertBefore(currOpt, target);
+        select.insertBefore(target, wrap);
+      };
+    })
+  });
+
 });

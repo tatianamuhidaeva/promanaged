@@ -1,0 +1,143 @@
+.server
+  padding: 50px 0
+  &__title
+    margin-bottom: 30px
+    &::after
+      content: ""
+      width: 751px
+      height: 1px
+      background-color: #e5e5e5
+  &__table
+    margin-bottom: 50px
+  &__price
+    display: block
+    +bold
+    font-size: 22px
+    color: #2045e4
+  &__unit
+    display: block
+    margin-bottom: 10px
+  &__btn
+    width: 166px
+  &__select
+    position: relative
+    text-transform: uppercase
+
+    &-radio
+      display: none
+    &-arrow
+      position: absolute
+      left: 115px
+      top: 18px
+      width: 0px
+      height: 0px
+      border-top: 3px solid #c2185b
+      border-left: 4px solid transparent
+      border-right: 4px solid transparent
+      border-bottom: 3px solid transparent
+      transform-origin: 50% 1px
+      transition-duration: 0.2s
+    &-wrap
+      display: none
+      position: absolute
+      left: 18px
+      top: 34px
+      width: 120px
+      z-index: 10
+      padding: 8px 13px
+      background-color: #ffffff
+      box-shadow: 0 0 38px rgba(0, 0, 0, 0.47)
+      font-size: 12px
+      text-transform: uppercase
+      .server__select-option
+        display: block
+        padding: 5px 0
+        border-bottom: 1px solid #e3e3e3
+        cursor: pointer
+        &:last-child
+          border-bottom: 0     
+        &:hover
+          color: #c2185b 
+
+
+
+.btn
+  height: 35px
+  border-radius: 2px
+  background-color: #c2185b
+  border: 0
+  outline: none
+  +regular
+  color: #ffffff
+  font-size: 14px
+  line-height: 35px
+  cursor: pointer
+  &:focus
+    outline: none
+
+.table
+  display: flex
+  justify-content: center
+  align-items: stretch
+.col
+  display: flex
+  flex-direction: column
+  align-items: stretch
+  &:first-child
+    flex-basis: 2
+
+.cell
+  padding: 12px 20px 14px
+  display: table-cell
+  height: 40px
+  +regular
+  font-size: 14px
+  color: $text-color
+  vertical-align: middle
+  &:first-child
+    +bold
+    font-size: 18px
+    text-transform: uppercase
+  &:nth-child(2n+1)
+    background-color: #fff
+  &:nth-child(2n)
+    background-color: #f8f8f8
+
+  &-price
+    height: auto
+
+.popular
+  position: relative
+  z-index: 2
+  box-shadow: 0 0 29px rgba(0, 0, 0, 0.3)
+  &:before
+    content: "популярное"
+    display: block
+    padding: 5px 7px
+    position: absolute
+    right: -8px
+    top: 10px
+    background-color: #c2185b
+    +bold 
+    text-transform: uppercase
+    font-size: 8px
+    color: #fff
+    line-height: 8px
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    right: -8px
+    top: 28px
+    height: 0
+    width: 0
+    border: 4px solid #800d3a
+    border-right-color: transparent 
+    border-bottom-color: transparent 
+    
+  .row
+    background-color: #fff
+
+
+
+  

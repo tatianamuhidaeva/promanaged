@@ -15,7 +15,9 @@
     <div class="preloader__loader"></div>
   </div>
   <div class="fullversion">
+    <a class="fullversion__btn" href="#">
       Полная версия
+    </a>
   </div>
   <div class="navbar">
     <div class="container navbar-wrap">
@@ -27,10 +29,10 @@
           <span class="navbar__toggle-i"></span>
         </div>
         <div class="navbar__items">
-            <div class="navbar__item"><a href="/index.html#price">Услуги</a></div>
-            <div class="navbar__item"><a href="/index.html#benefits">Почему&nbsp;Pro-Managed</a></div>
-            <div class="navbar__item"><a href="/index.html#feedback">Отзывы</a></div>
-            <div class="navbar__item"><a href="/index.html#partners">Партнеры</a></div>
+          <div class="navbar__item"><a href="/index.html#price">Услуги</a></div>
+          <div class="navbar__item"><a href="/index.html#benefits">Почему&nbsp;Pro-Managed</a></div>
+          <div class="navbar__item"><a href="/index.html#feedback">Отзывы</a></div>
+          <div class="navbar__item"><a href="/index.html#partners">Партнеры</a></div>
           <br>
           <div class="navbar-contacts">
             <a href="tel:80765767667" class="navbar-contacts__phone"> +7 (495) 1200-885</a>
@@ -44,49 +46,182 @@
       </div>
     </div>
   </div>
-  <div class="main">
+  <div class="server">
     <div class="container">
-      <h1 class="section__title"></h1>
-      <div class="main__table">
+      <h1 class="server__title section__title">Выделенный сервер</h1>
+      <div class="server__table table">
+        <!-- col-0 -->
+        <div class="col">
+          <div class="cell">&nbsp;</div>
+          <div class="cell">Процессор</div>
+          <div class="cell">Количество ядер</div>
+          <div class="cell">Количество процессоров</div>
+          <div class="cell">Оперативной памяти, ГБ</div>
+          <div class="cell">Жесткие диски</div>
+          <div class="cell">Трафик</div>
+          <div class="cell">Выделенные IPv4-адреса</div>
+          <div class="cell">Хранилище для бэкапов, ГБ</div>
+          <div class="cell">Период оплаты</div>
+          <div class="cell">Цена</div>
+        </div>
+        <!-- col-1 -->
+        <div class="col">
+          <div class="cell caption">START</div>
+          <div class="cell">Xeon E3-1230</div>
+          <div class="cell">4x 3.3 ГГц</div>
+          <div class="cell">1</div>
+          <div class="cell">4</div>
+          <div class="cell">2х 500 ГБ</div>
+          <div class="cell">&infin;</div>
+          <div class="cell">1</div>
+          <div class="cell">50</div>
+          <div class="cell server__select cell-period ">
+            <div class="server__select-arrow"></div>
+            <input class="server__select-radio" id="month-1" name="period" type="radio" value="0" checked>
+            <input class="server__select-radio" id="month-3" name="period" type="radio" value="0.33">
+            <input class="server__select-radio" id="month-6" name="period" type="radio" value="0.4">
+            <input class="server__select-radio" id="month-12" name="period" type="radio" value="0.5">
+            <label class="server__select-option" for="month-1">1 месяц</label>
+            <div class="server__select-wrap">
+              <label class="server__select-option" for="month-3">3 месяца</label>
+              <label class="server__select-option" for="month-6">6 месяцев</label>
+              <label class="server__select-option" for="month-12">12 месяцев</label>
+            </div>
+          </div>
+          <div class="cell cell-price">
+            <span class="server__price">990.00</span>
+            <span class="server__unit">руб.</span>
+            <button class="btn server__btn">Заказать</button>
+          </div>
+        </div>
+        <!-- col-2 -->
+        <div class="col popular">
+          <div class="cell caption">SINGLE</div>
+          <div class="cell">Xeon E3-1230</div>
+          <div class="cell">4x 3.3 ГГц</div>
+          <div class="cell">1</div>
+          <div class="cell">16</div>
+          <div class="cell">2х 500 ГБ</div>
+          <div class="cell">&infin;</div>
+          <div class="cell">1</div>
+          <div class="cell">50</div>
+          <div class="cell cell-period">
+            <!-- <select name="period" id="period" class="select server__select">
+              <option class="select__option server__select-option" value="0" selected>1 месяц</option>
+              <option class="select__option server__select-option" value="0.33">3 месяца</option>
+              <option class="select__option server__select-option" value="0.4">6 месяцев</option>
+              <option class="select__option server__select-option" value="0.5">12 месяцев</option>
+            </select> -->
+          </div>
+          <div class="cell cell-price">
+            <span class="server__price">1290.00</span>
+            <span class="server__unit">руб.</span>
+            <button class="btn server__btn">Заказать</button>
+          </div>
+        </div>
+        <!-- col-3 -->
+        <div class="col">
+          <div class="cell caption">DUAL</div>
+          <div class="cell">Xeon E3-1230</div>
+          <div class="cell">4x 3.3 ГГц</div>
+          <div class="cell">1</div>
+          <div class="cell">32</div>
+          <div class="cell">2х 500 ГБ</div>
+          <div class="cell">&infin;</div>
+          <div class="cell">1</div>
+          <div class="cell">50</div>
+          <div class="cell cell-period">
+            <!-- <select name="period" id="period" class="select server__select">
+              <option class="select__option server__select-option" value="0" selected>1 месяц</option>
+              <option class="select__option server__select-option" value="0.33">3 месяца</option>
+              <option class="select__option server__select-option" value="0.4">6 месяцев</option>
+              <option class="select__option server__select-option" value="0.5">12 месяцев</option>
+            </select> -->
+          </div>
+          <div class="cell cell-price">
+            <span class="server__price">1 990.00</span>
+            <span class="server__unit">руб.</span>
+            <button class="btn server__btn">Заказать</button>
+          </div>
+        </div>
+        <!-- col-4 -->
+        <div class="col">
+          <div class="cell caption">DUAL+</div>
+          <div class="cell">Xeon E3-1230</div>
+          <div class="cell">4x 3.3 ГГц</div>
+          <div class="cell">1</div>
+          <div class="cell">16</div>
+          <div class="cell">2х 500 ГБ</div>
+          <div class="cell">&infin;</div>
+          <div class="cell">1</div>
+          <div class="cell">50</div>
+          <div class="cell cell-period">
+            <!-- <select name="period" id="period" class="select server__select">
+              <option class="select__option server__select-option" value="0" selected>1 месяц</option>
+              <option class="select__option server__select-option" value="0.33">3 месяца</option>
+              <option class="select__option server__select-option" value="0.4">6 месяцев</option>
+              <option class="select__option server__select-option" value="0.5">12 месяцев</option>
+            </select> -->
+          </div>
+          <div class="cell cell-price">
+            <span class="server__price">2 790.00</span>
+            <span class="server__unit">руб.</span>
+            <button class="btn server__btn">Заказать</button>
+          </div>
+        </div>
+      </div>
+      <!-- end server__table -->
 
+      <div class="server__info">
+        <h4 class="server__info-title">Система скидок:</h4>
+        <p>За длительный заказ:</p>
+        <ul>
+          <li>При оплате за 3 месяца - скидка 33%</li>
+          <li>При оплате за 6 месяцев - скидка 40%</li>
+          <li>При оплате за год - скидка 50%</li>
+        </ul>
+        <h4 class="server__info-title">За несколько заказов на аккаунте:</h4>
+        <p>Каждый последующий заказ получит дополнительную скидку 2000 р.</p>
       </div>
     </div>
 
   </div>
   <footer class="footer">
-      <div class="container footer-wrap">
-        <div class="footer-logo">
-          <a class="footer__logo" href="/index.html">
-            <img src="/img/logo.png" alt="Логотип PROManaged">
-          </a>
-          <span>hosting company</span>
-        </div>
-        <div class="footer-navs">
-            <div class="footer__nav"><a href="/index.html#price">Услуги</a></div>
-            <div class="footer__nav"><a href="/index.html#benefits">Почему&nbsp;Pro-Managed</a></div>
-            <div class="footer__nav"><a href="/index.html#feedback">Отзывы</a></div>
-            <div class="footer__nav"><a href="/index.html#partners">Партнеры</a></div>
-        </div>
-        <div class="footer-contacts">
-          <a class="footer__phone" href="tel:+74951200885"> +7 (495) 1200-885</a>
-          <a class="footer__mail" href="mailto:client@promanaged.com">client@promanaged.com</a>
-        </div>
+    <div class="container footer-wrap">
+      <div class="footer-logo">
+        <a class="footer__logo" href="/index.html">
+          <img src="/img/logo.png" alt="Логотип PROManaged">
+        </a>
+        <span>hosting company</span>
       </div>
-    </footer>
-    <div class="copyright">
-      <div class="container copyright-wrap">
-        <span class="copyright__elem" >2019 &copy; Все права защищены</span>
-        <a  class="copyright__elem" href="#">политика конфиденциальности</a>
-        <a  class="copyright__elem" href="#">Разработка сайта — Bulgar promo</a>
+      <div class="footer-navs">
+        <div class="footer__nav"><a href="/index.html#price">Услуги</a></div>
+        <div class="footer__nav"><a href="/index.html#benefits">Почему&nbsp;Pro-Managed</a></div>
+        <div class="footer__nav"><a href="/index.html#feedback">Отзывы</a></div>
+        <div class="footer__nav"><a href="/index.html#partners">Партнеры</a></div>
+      </div>
+      <div class="footer-contacts">
+        <a class="footer__phone" href="tel:+74951200885"> +7 (495) 1200-885</a>
+        <a class="footer__mail" href="mailto:client@promanaged.com">client@promanaged.com</a>
       </div>
     </div>
-    <link rel="stylesheet" href="/css/animate.css">
-    <link rel="stylesheet" href="/css/price.css">
-  
-    <script src="/js/feedbackSlider.js"></script>
-    <script src="/js/preloader.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/inputDate.js"></script>
-  </body>
-  
-  </html>
+  </footer>
+  <div class="copyright">
+    <div class="container copyright-wrap">
+      <span class="copyright__elem">2019 &copy; Все права защищены</span>
+      <a class="copyright__elem" href="#">политика конфиденциальности</a>
+      <a class="copyright__elem" href="#">Разработка сайта — Bulgar promo</a>
+    </div>
+  </div>
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/css/server.css">
+  <!-- <link rel="stylesheet" href="css/media-xs-server.css"> -->
+
+
+  <script src="/js/preloader.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+
+</body>
+
+</html>
