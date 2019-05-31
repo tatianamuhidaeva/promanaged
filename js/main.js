@@ -57,7 +57,6 @@ window.addEventListener('DOMContentLoaded', function () {
   //Remove XS-Style
   let btnFullVersion = document.querySelector('.fullversion__btn');
   btnFullVersion.addEventListener('click', function () {
-    console.log(document.styleSheets);
     document.styleSheets[5].disabled = true;
     isMobile = false;
     document.body.style.width = "760px";
@@ -67,13 +66,11 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   //select period on Server
-
-  let selects = document.querySelectorAll('.server__select-current');
+  let selects = document.querySelectorAll('.server__select');
   selects.forEach(elem => {
     elem.addEventListener('click', function (e) {
-      console.log("currentTarget" + e.target.className);
-      let optionWrap = e.currentTarget.parentElement.querySelector('.server__select-wrap'),
-        arrow = e.currentTarget.parentElement.querySelector('.server__select-arrow');
+      let optionWrap = e.currentTarget.querySelector('.server__select-wrap'),
+        arrow = e.currentTarget.querySelector('.server__select-arrow');
       if (getComputedStyle(optionWrap).display == "none") {
         optionWrap.style.display = "block";
         arrow.style.transform = "rotate(180deg)";

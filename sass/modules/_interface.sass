@@ -1,0 +1,80 @@
+.btn
+  height: 35px
+  border-radius: 2px
+  background-color: #c2185b
+  border: 0
+  outline: none
+  +regular
+  color: #ffffff
+  font-size: 14px
+  line-height: 35px
+  cursor: pointer
+  &:hover
+    background-color: #a20b47
+  &:focus
+    outline: none
+    background-color: #d41e66
+  
+.table
+  display: flex
+  justify-content: center
+  align-items: stretch
+.col
+  display: flex
+  flex-direction: column
+  align-items: stretch
+  &:first-child
+    flex-grow: 3
+
+.cell
+  display: table-cell
+  +regular
+  font-size: 14px
+  color: $text-color
+  vertical-align: middle
+  &:first-child
+    +bold
+    font-size: 18px
+    text-transform: uppercase
+  &:nth-child(2n+1)
+    padding: 20px 20px 18px
+    height: 57px
+    background-color: #fff
+  &:nth-child(2n)
+    padding: 12px 20px 14px
+    height: 40px
+    background-color: #f8f8f8
+  &:nth-last-child(2), &:last-child
+    height: auto
+    background-color: #fff
+  &:nth-last-child(2)
+    padding-bottom: 0
+
+.popular
+  position: relative
+  z-index: 2
+  box-shadow: 0 0 29px rgba(0, 0, 0, 0.3)
+  &:before
+    content: "популярное"
+    display: block
+    padding: 5px 7px
+    position: absolute
+    right: -8px
+    top: 10px
+    background-color: #c2185b
+    +bold 
+    text-transform: uppercase
+    font-size: 8px
+    color: #fff
+    line-height: 8px
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    right: -8px
+    top: 28px
+    height: 0
+    width: 0
+    border: 4px solid #800d3a
+    border-right-color: transparent 
+    border-bottom-color: transparent 

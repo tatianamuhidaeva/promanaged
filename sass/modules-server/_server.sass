@@ -1,0 +1,78 @@
+.main
+  display: none
+.server
+  padding: 125px 0 64px
+  &__title
+    &::after
+      content: ""
+      display: block
+      width: 751px
+      height: 1px
+      margin-top: 39px
+      margin-bottom: 18px
+      background-color: #e5e5e5
+  &__table
+    margin: 0 auto 48px
+  &__price
+    display: block
+    +bold
+    font-size: 22px
+    color: #2045e4
+  &__btn
+    width: 166px
+  &__select
+    position: relative
+    text-transform: uppercase
+    cursor: pointer
+    &-arrow
+      position: absolute
+      left: 115px
+      top: 18px
+      width: 0px
+      height: 0px
+      border-top: 3px solid #c2185b
+      border-left: 4px solid transparent
+      border-right: 4px solid transparent
+      border-bottom: 3px solid transparent
+      transform-origin: 50% 1px
+      transition-duration: 0.2s
+    &-current
+      position: relative
+      z-index: 5
+    &-wrap
+      display: none
+      position: absolute
+      left: 18px
+      top: 34px
+      width: 120px
+      z-index: 10
+      padding: 8px 13px
+      background-color: #ffffff
+      box-shadow: 0 0 38px rgba(0, 0, 0, 0.47)
+      font-size: 12px
+      text-transform: uppercase
+      .server__select-option
+        display: block
+        padding: 5px 0
+        border-bottom: 1px solid #e3e3e3
+        cursor: pointer
+        &:last-child
+          border-bottom: 0     
+        &:hover
+          color: #c2185b 
+    &-radio
+      display: none
+      &:checked + label.server__select-option
+        color: #c2185b
+        font-weight: 800
+  &__info
+    &-title
+      +bold
+      font-size: 16px
+      margin-top: 33px
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+    &-p
+      margin: 7px 0

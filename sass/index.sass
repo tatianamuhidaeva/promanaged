@@ -1,7 +1,8 @@
-@import 'normalize'
-@import 'vars'
-@import 'mixins'
-@import 'fonts'
+@import 'modules/normalize'
+@import 'modules/vars'
+@import 'modules/fonts'
+@import 'modules/mixins'
+@import 'modules-main/mixins-main'
 
 *, *::before, *::after
   box-sizing: border-box
@@ -45,13 +46,12 @@ a
   .container
     max-width: 95%
 
-// @import 'interface'
-@import 'modules-main/navbar'
+@import 'modules/navbar'
+@import 'modules/footer'
+@import 'modules/copyright'
 @import 'modules-main/main'
 @import 'modules-main/price'
 @import 'modules-main/benefit'
 @import 'modules-main/feedback'
 @import 'modules-main/partners'
-@import 'modules-main/footer'
-@import 'modules-main/copyright'
-@import 'media-md'
+@import 'modules-main/media-md'

@@ -1,7 +1,9 @@
-@import 'normalize'
-@import 'vars'
-@import 'mixins'
-@import 'fonts'
+@import 'modules/normalize'
+@import 'modules/vars'
+@import 'modules/fonts'
+@import 'modules/mixins'
+@import 'modules-server/mixins-server'
+@import 'modules/interface'
 
 *, *::before, *::after
   box-sizing: border-box
@@ -45,9 +47,8 @@ a
   .section__title
     font-size: 18px
 
-@import 'interface'
-@import 'modules-main/navbar'
-@import 'modules-price/server'
-@import 'modules-main/footer'
-@import 'modules-main/copyright'
-@import 'modules-price/media-md-server'
+@import 'modules/navbar'
+@import 'modules/footer'
+@import 'modules/copyright'
+@import 'modules-server/server'
+@import 'modules-server/media-md-server'

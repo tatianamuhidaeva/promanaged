@@ -491,6 +491,106 @@ a {
   margin-top: 2px;
 }
 
+.footer {
+  padding: 90px 0;
+  background-color: #77389f;
+  background-repeat: no-repeat;
+  background-image: url("../img/bg-footer.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: 'SFUIDisplay-Regular' , sans-serif;
+  color: #ffffff;
+}
+
+.footer a:hover {
+  color: #fdee06;
+}
+
+.footer-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__logo {
+  display: block;
+}
+
+.footer__logo img {
+  width: 210px;
+  height: 77px;
+}
+
+.footer-logo > span {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.footer-navs {
+  min-height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__nav {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.footer-contacts {
+  text-align: right;
+}
+
+.footer__phone {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.footer__mail {
+  display: block;
+  font-size: 14px;
+}
+
+.copyright {
+  padding: 12px 0;
+}
+
+.copyright-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'SFUIDisplay-Regular' , sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
 .main {
   padding: 147px 0 93px;
   color: #ffffff;
@@ -1059,106 +1159,6 @@ a {
 
 .partners__icon img {
   width: 100%;
-}
-
-.footer {
-  padding: 90px 0;
-  background-color: #77389f;
-  background-repeat: no-repeat;
-  background-image: url("../img/bg-footer.jpg");
-  background-size: cover;
-  background-position: center;
-  font-family: 'SFUIDisplay-Regular' , sans-serif;
-  color: #ffffff;
-}
-
-.footer a:hover {
-  color: #fdee06;
-}
-
-.footer-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer__logo {
-  display: block;
-}
-
-.footer__logo img {
-  width: 210px;
-  height: 77px;
-}
-
-.footer-logo > span {
-  display: block;
-  font-size: 10px;
-  text-transform: uppercase;
-}
-
-.footer-navs {
-  min-height: 75px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.footer__nav {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-.footer-contacts {
-  text-align: right;
-}
-
-.footer__phone {
-  display: block;
-  font-size: 24px;
-  margin-bottom: 5px;
-}
-
-.footer__mail {
-  display: block;
-  font-size: 14px;
-}
-
-.copyright {
-  padding: 12px 0;
-}
-
-.copyright-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: 'SFUIDisplay-Regular' , sans-serif;
-  font-size: 10px;
-  text-transform: uppercase;
 }
 
 @media (max-width: 992px) {
