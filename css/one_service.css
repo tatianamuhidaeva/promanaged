@@ -546,12 +546,6 @@ a {
   color: #333333;
 }
 
-.flex {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
 @media (max-width: 1200px) {
   .container {
     max-width: 95%;
@@ -744,74 +738,15 @@ a {
   text-transform: uppercase;
 }
 
-.popup {
-  display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99;
-  background-color: rgba(253, 253, 253, 0.5);
-}
-
-.popup-wrap {
-  position: relative;
-  padding: 45px 97px 35px;
-  width: 556px;
-  -webkit-box-shadow: 0 0 38px rgba(0, 0, 0, 0.47);
-          box-shadow: 0 0 38px rgba(0, 0, 0, 0.47);
-  background-color: #fdfdfd;
-  text-align: center;
-}
-
-.popup__close {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  font-family: 'SFUIDisplay-Regular' , sans-serif;
-  color: #c2185b;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-.popup__title {
-  margin-bottom: 40px;
-}
-
-.popup__input {
-  width: 360px;
-  margin-bottom: 17px;
-}
-
-.popup__warm {
-  font-family: 'SFUIDisplay-Regular' , sans-serif;
-  font-size: 12px;
-  color: #939393;
-  margin-bottom: 22px;
-  text-align: left;
-}
-
-.popup__btn {
-  width: 166px;
-  margin: 0 auto;
-}
-
 .main {
   display: none;
 }
 
-.server {
-  padding: 125px 0 64px;
+.serv {
+  padding: 125px 0 119px;
 }
 
-.server__title::after {
+.serv__title::after {
   content: "";
   display: block;
   width: 751px;
@@ -821,101 +756,80 @@ a {
   background-color: #e5e5e5;
 }
 
-.server__table {
-  margin: 0 auto 48px;
+.serv-wrap {
+  padding: 13px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.server__price {
-  display: block;
-  font-family: 'SFUIDisplay-Bold' , sans-serif;
-  font-size: 22px;
-  color: #2045e4;
+.serv-about {
+  -ms-flex-preferred-size: 780px;
+      flex-basis: 780px;
 }
 
-.server__btn {
-  width: 166px;
+.serv__options {
+  list-style: none;
+  padding-left: 27px;
+  margin: 0;
 }
 
-.server__select {
+.serv__option {
   position: relative;
-  text-transform: uppercase;
-  cursor: pointer;
+  margin-bottom: 11px;
+  font-family: 'SFUIDisplay-Regular' , sans-serif;
+  font-size: 16px;
 }
 
-.server__select-arrow {
+.serv__option::before {
+  content: "";
   position: absolute;
-  left: 115px;
-  top: 18px;
-  width: 0px;
-  height: 0px;
-  border-top: 3px solid #c2185b;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-bottom: 3px solid transparent;
-  -webkit-transform-origin: 50% 1px;
-          transform-origin: 50% 1px;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
+  left: -25px;
+  top: 3px;
+  width: 14px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-image: url(../img/flag.png);
+  background-size: contain;
 }
 
-.server__select-current {
-  position: relative;
-  z-index: 5;
-}
-
-.server__select-wrap {
-  display: none;
-  position: absolute;
-  left: 18px;
-  top: 34px;
-  width: 120px;
-  z-index: 10;
-  padding: 8px 13px;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 0 38px rgba(0, 0, 0, 0.47);
-          box-shadow: 0 0 38px rgba(0, 0, 0, 0.47);
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.server__select-wrap .server__select-option {
-  display: block;
-  padding: 5px 0;
-  border-bottom: 1px solid #e3e3e3;
-  cursor: pointer;
-}
-
-.server__select-wrap .server__select-option:last-child {
-  border-bottom: 0;
-}
-
-.server__select-wrap .server__select-option:hover {
-  color: #c2185b;
-}
-
-.server__select-radio {
-  display: none;
-}
-
-.server__select-radio:checked + label.server__select-option {
-  color: #c2185b;
-  font-weight: 800;
-}
-
-.server__info-title {
+.serv__info-title {
   font-family: 'SFUIDisplay-Bold' , sans-serif;
   font-size: 16px;
   margin-top: 33px;
 }
 
-.server__info ul {
+.serv__info ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.server__info-p {
+.serv__info-p {
   margin: 7px 0;
+}
+
+.serv-price {
+  margin-bottom: 130px;
+  font-family: 'SFUIDisplay-Bold' , sans-serif;
+  font-size: 16px;
+}
+
+.serv-price span {
+  display: block;
+}
+
+.serv__price {
+  display: block;
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+.serv__btn {
+  width: 263px;
 }
 
 .hidden {
@@ -1002,53 +916,54 @@ a {
   .navbar-contacts__email {
     font-size: 8px;
   }
-  .server {
-    padding: 70px 0 40px;
+  .serv {
+    padding: 70px 0 78px;
   }
-  .server__title::after {
+  .serv__title::after {
     width: 474px;
     margin-top: 25px;
     margin-bottom: 14px;
   }
-  .server__table {
-    margin-bottom: 30px;
-  }
-  .server__price {
-    font-size: 14px;
-  }
-  .server__unit {
-    margin-bottom: 10px;
-  }
-  .server__btn {
-    width: 95px;
-  }
-  .server__select-arrow {
-    left: 68px;
-    top: 12px;
-    border-top: 2px solid #c2185b;
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
-    border-bottom: 2px solid transparent;
-  }
-  .server__select-wrap {
-    left: 10px;
-    top: 22px;
-    width: 85px;
-    padding: 8px 13px;
-    font-size: 8px;
-  }
-  .server__select-wrap .server__select-option {
+  .serv-wrap {
     padding: 5px 0;
   }
-  .server__info {
+  .serv-about {
+    -ms-flex-preferred-size: 500px;
+        flex-basis: 500px;
+  }
+  .serv__options {
+    padding-left: 15px;
+  }
+  .serv__option {
+    margin-bottom: 8px;
     font-size: 10px;
   }
-  .server__info-title {
+  .serv__option::before {
+    left: -15px;
+    top: 1px;
+    width: 9px;
+    height: 7px;
+  }
+  .serv__info {
+    font-size: 10px;
+  }
+  .serv__info-title {
     font-size: 10px;
     margin-top: 23px;
   }
-  .server__info-p {
+  .serv__info-p {
     margin: 4px 0;
+  }
+  .serv-price {
+    margin-bottom: 85px;
+    font-size: 10px;
+  }
+  .serv__price {
+    margin: 15px 0;
+    font-size: 16px;
+  }
+  .serv__btn {
+    width: 158px;
   }
   .footer {
     padding: 60px 0;
@@ -1080,22 +995,5 @@ a {
   .copyright-wrap {
     font-size: 6px;
   }
-  .popup-wrap {
-    padding: 25px 50px;
-    width: 400px;
-  }
-  .popup__title {
-    margin-bottom: 30px;
-  }
-  .popup__warm {
-    font-size: 10px;
-    text-align: center;
-  }
-  .popup__input {
-    width: 300px;
-  }
-  .popup__btn {
-    width: 150px;
-  }
 }
-/*# sourceMappingURL=server.css.map */
+/*# sourceMappingURL=one_service.css.map */

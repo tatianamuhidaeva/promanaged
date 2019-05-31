@@ -35,16 +35,6 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  body.addEventListener("click", function (e) {
-    if ((window.innerWidth <= 660) && isMobile) {
-      if (new WebKitCSSMatrix(getComputedStyle(menu).webkitTransform).m41 >= 0) {
-        if (!parentsOfElements(e.target, "navbar__items") &&
-          !e.target.classList.contains("navbar__toggle")) {
-          closeMenu();
-        }
-      }
-    }
-  });
 
   window.addEventListener('resize', function () {
     if (window.innerWidth > 660) {
@@ -85,7 +75,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   let optionWraps = document.querySelectorAll('.server__select-wrap');
   let currOpt = document.querySelectorAll('.server__select-current');
-  
+
   for (let i = 0; i < optionWraps.length; i++) {
     currOpt[i].textContent = optionWraps[i].querySelector('.server__select-radio[checked=""]+.server__select-option').textContent;
     optionWraps[i].addEventListener('click', function (e) {
@@ -104,4 +94,15 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   };
 
+  
+  body.addEventListener("click", function (e) {
+    if ((window.innerWidth <= 660) && isMobile) {
+      if (new WebKitCSSMatrix(getComputedStyle(menu).webkitTransform).m41 >= 0) {
+        if (!parentsOfElements(e.target, "navbar__items") &&
+          !e.target.classList.contains("navbar__toggle")) {
+          closeMenu();
+        }
+      }
+    }
+  });
 });

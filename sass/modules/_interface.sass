@@ -1,4 +1,5 @@
 .btn
+  display: block
   height: 35px
   border-radius: 2px
   background-color: #c2185b
@@ -8,12 +9,33 @@
   color: #ffffff
   font-size: 14px
   line-height: 35px
+  text-align: center
   cursor: pointer
   &:hover
     background-color: #a20b47
   &:focus
     outline: none
     background-color: #d41e66
+  &-big
+    display: block
+    height: 60px
+    font-size: 16px
+    line-height: 60px
+
+
+.input
+  height: 45px
+  padding-left: 15px
+  border: 1px solid #d2d2d2
+  outline: none
+  background-color: #ffffff
+  +regular
+  color: $text-color
+  font-size: 16px
+  line-height: 45px
+  &:focus
+    outline: none
+    border-color: $primary-color
   
 .table
   display: flex

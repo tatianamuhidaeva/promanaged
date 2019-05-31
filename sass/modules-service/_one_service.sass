@@ -1,0 +1,62 @@
+.main
+  display: none
+.serv
+  padding: 125px 0 119px
+  &__title
+    &::after
+      content: ""
+      display: block
+      width: 751px
+      height: 1px
+      margin-top: 39px
+      margin-bottom: 18px
+      background-color: #e5e5e5
+  &-wrap
+    padding: 13px 0
+    display: flex
+    align-items: flex-start
+  &-about
+    flex-basis: 780px
+  &__options
+    list-style: none
+    padding-left: 27px
+    margin: 0
+  &__option
+    position: relative
+    margin-bottom: 11px
+    +regular
+    font-size: 16px
+    &::before
+      content: ""
+      position: absolute
+      left: -25px
+      top: 3px
+      width: 14px
+      height: 10px
+      background: 
+        repeat: no-repeat
+        image: url(../img/flag.png)
+        size: contain  
+  &__info
+    &-title
+      +bold
+      font-size: 16px
+      margin-top: 33px
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+    &-p
+      margin: 7px 0 
+  &-price
+    margin-bottom: 130px
+    +bold
+    font-size: 16px
+    span
+      display: block
+  &__price
+    display: block
+    margin: 20px 0
+    font-size: 24px
+  &__btn
+    width: 263px

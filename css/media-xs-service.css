@@ -201,61 +201,64 @@
     width: 210px;
     height: 77px;
   }
-  .server {
+  .serv {
     padding: 43px 0 40px;
   }
-  .server__title {
+  .serv__title {
+    font-size: 18px;
     text-align: center;
   }
-  .server__title::after {
+  .serv__title::after {
     width: 218px;
-    margin: 20px auto 39px;
+    margin: 20px auto 18px;
   }
-  .server__table {
-    margin-bottom: 30px;
-  }
-  .server__price {
-    font-size: 22px;
-  }
-  .server__unit {
-    display: block;
-    text-align: right;
-  }
-  .server__btn {
-    width: 100%;
-  }
-  .server__select-arrow {
-    left: auto;
-    right: 11px;
-    top: 9px;
-    border-top: 3px solid #c2185b;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 3px solid transparent;
-  }
-  .server__select-current {
-    margin-right: 15px;
-  }
-  .server__select-wrap {
-    left: auto;
-    right: 15px;
-    top: 22px;
-    width: 95px;
-    padding: 8px 13px;
-    font-size: 10px;
-  }
-  .server__select-wrap .server__select-option {
+  .serv-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
     padding: 5px 0;
   }
-  .server__info {
+  .serv-about {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .serv__options {
+    padding-left: 15px;
+  }
+  .serv__option {
+    margin-bottom: 8px;
     font-size: 12px;
   }
-  .server__info-title {
+  .serv__option::before {
+    left: -15px;
+    top: 1px;
+    width: 9px;
+    height: 7px;
+  }
+  .serv__info {
+    font-size: 12px;
+  }
+  .serv__info-title {
     font-size: 12px;
     margin-top: 28px;
   }
-  .server__info-p {
+  .serv__info-p {
     margin: 9px 0;
+  }
+  .serv-price {
+    margin-bottom: 39px;
+    font-size: 12px;
+  }
+  .serv__price {
+    margin: 20px 0;
+    font-size: 16px;
+  }
+  .serv__btn {
+    width: 100%;
   }
   .footer {
     padding: 15px 0;
@@ -331,4 +334,4 @@
     width: 150px;
   }
 }
-/*# sourceMappingURL=media-xs-server.css.map */
+/*# sourceMappingURL=media-xs-service.css.map */
