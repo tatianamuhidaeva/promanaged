@@ -1,75 +1,160 @@
-.input
-  height: 48px
-  border: 0
-  outline: none
-  border-radius: 3px
-  background:
-    repeat: no-repeat
-    color: #fff
-  +montserrat
-  font-size: 18px
-  text-color: #444444
-  line-height: 28px
-  &:focus
-    outline: none
-    background-color: #eeeeee
 .btn
-  position: relative
-  padding: 0 27px
-  height: 48px
-  box-shadow: 0 5px 6px rgba(87, 91, 124, 0.45)
-  border-radius: 3px
+  height: 35px
+  border-radius: 2px
+  background-color: #c2185b
   border: 0
   outline: none
-  background-color: #fbd407
-  +montserrat
-  font-size: 18px
-  color: #333333
-  line-height: 28px
+  +regular
+  color: #ffffff
+  font-size: 14px
+  line-height: 35px
   cursor: pointer
-  transition-duration: 0.1s
-  &::before
-    content: ""
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-color: #000000
-    border-radius: 3px
-    opacity: 0
-    transition-duration: 0.2s
+  &:hover
+    background-color: #a20b47
   &:focus
     outline: none
-  &:hover
-    &::before
-      opacity: 0.2
-  &:active
-    transform: translateY(2px)
-    box-shadow: 0 3px 6px rgba(87, 91, 124, 0.45)
+    background-color: #d41e66
+  
+.table
+  display: flex
+  justify-content: center
+  align-items: stretch
+.col
+  display: flex
+  flex-direction: column
+  align-items: stretch
+  &:first-child
+    flex-grow: 3
 
-
-
-@media (max-width: $xlg)
-  .input
+.cell
+  display: table-cell
+  +regular
+  font-size: 14px
+  color: $text-color
+  vertical-align: middle
+  &:first-child
+    +bold
+    font-size: 18px
+    text-transform: uppercase
+  &:nth-child(2n+1)
+    padding: 20px 20px 18px
+    height: 57px
+    background-color: #fff
+  &:nth-child(2n)
+    padding: 12px 20px 14px
     height: 40px
-    font-size: 15px
-    line-height: 25px
+    background-color: #f8f8f8
+  &:nth-last-child(2), &:last-child
+    height: auto
+    background-color: #fff
+  &:nth-last-child(2)
+    padding-bottom: 0
+
+.popular
+  position: relative
+  z-index: 2
+  box-shadow: 0 0 29px rgba(0, 0, 0, 0.3)
+  &:before
+    content: "популярное"
+    display: block
+    padding: 5px 7px
+    position: absolute
+    right: -8px
+    top: 10px
+    background-color: #c2185b
+    +bold 
+    text-transform: uppercase
+    font-size: 8px
+    color: #fff
+    line-height: 8px
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    right: -8px
+    top: 28px
+    height: 0
+    width: 0
+    border: 4px solid #800d3a
+    border-right-color: transparent 
+    border-bottom-color: transparent 
+
+@media (max-width: $md)
   .btn
-    padding: 0 20px
-    height: 40px
-    font-size: 15px
-    line-height: 25px
-@media (max-width: $lg)
-  .input
-    height: 36px
-    font-size: 13px
-    line-height: 20px
+    height: 22px
+    font-size: 9px
+    line-height: 22px
+  .cell
+    font-size: 9px
+    &:first-child
+      font-size: 12px
+    &:nth-child(2n+1)
+      padding: 10px 15px 9px
+      height: 36px
+    &:nth-child(2n)
+      padding: 8px 15px 7px
+      height: 27px
+    &:nth-last-child(2), &:last-child
+      height: auto
+    &:nth-last-child(2)
+      padding-bottom: 0
+  .popular
+    &:before
+      padding: 5px 4px
+      position: absolute
+      right: -4px
+      top: 7px
+      font-size: 5px
+      line-height: 1
+    &:after
+      right: -4px
+      top: 22px
+      border: 2px solid #800d3a
+      border-right-color: transparent 
+      border-bottom-color: transparent 
+
+
+@media (max-width: $xs)
+  .table
+    flex-direction: column
+    justify-content: flex-start
+    align-items: stretch
   .btn
-    padding: 0 10px
-    height: 36px
-    font-size: 12px
-    line-height: 20px
-@media (max-width: $sm)
-  .btn:hover::before
-      opacity: 0
+    height: 35px
+    font-size: 14px
+    line-height: 35px
+  .col
+    margin-bottom: 20px
+  .cell
+    display: flex
+    justify-content: space-between
+    font-size: 14px
+    &:first-child
+      font-size: 18px
+    &:nth-child(2n+1)
+      background-color: #ffffff
+      padding: 3px 10px 3px 6px
+      height: auto
+    &:nth-child(2n)
+      background-color: #ffffff
+      padding: 3px 10px 3px 6px
+      height: auto
+    &:last-child
+      height: auto
+    &.caption
+      display: block
+      background-color: #f5f5f5
+      text-align: center
+      padding: 11px 0
+      margin-bottom: 26px
+  .popular
+    box-shadow: none
+    &:before
+      // padding: 5px 4px
+      position: absolute
+      right: 11px
+      top: 11px
+      font-size: 8px
+    &:after
+      display: none
+

@@ -46,12 +46,19 @@
       </div>
     </div>
   </div>
+  <div class="main">
+    <div class="container">
+      <a class="main__logo" href="/index.html">
+        <img src="/img/logo.png" alt="Логотип PROManaged">
+      </a>
+    </div>
+  </div>
   <div class="server">
     <div class="container">
       <h1 class="server__title section__title">Выделенный сервер</h1>
       <div class="server__table table">
         <!-- col-0 -->
-        <div class="col">
+        <div class="col hidden-xs">
           <div class="cell">&nbsp;</div>
           <div class="cell">Процессор</div>
           <div class="cell">Количество ядер</div>
@@ -63,109 +70,198 @@
           <div class="cell">Хранилище для бэкапов, ГБ</div>
           <div class="cell">Период оплаты</div>
           <div class="cell">Цена</div>
+          <div class="cell">&nbsp;</div>
+
         </div>
         <!-- col-1 -->
-        <div class="col">
+        <div class="col server__tariff">
           <div class="cell caption">START</div>
-          <div class="cell">Xeon E3-1230</div>
-          <div class="cell">4x 3.3 ГГц</div>
-          <div class="cell">1</div>
-          <div class="cell">4</div>
-          <div class="cell">2х 500 ГБ</div>
-          <div class="cell">&infin;</div>
-          <div class="cell">1</div>
-          <div class="cell">50</div>
+          <div class="cell">
+            <span class="hidden visible-xs">Процессор</span><span>Xeon E3-1230</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Количество ядер</span><span>4x 3.3 ГГц</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Количество процессоров</span><span>1</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Оперативной памяти, ГБ</span><span>4</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Жесткие диски</span><span>2х 500 ГБ</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Трафик</span><span>&infin;</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Выделенные IPv4-адреса</span><span>1</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Хранилище для бэкапов, ГБ</span><span>Отсутствует</span></div>
           <div class="cell server__select cell-period ">
-            <div class="server__select-arrow"></div>
-            <input class="server__select-radio" id="month-1" name="period" type="radio" value="0" checked>
-            <input class="server__select-radio" id="month-3" name="period" type="radio" value="0.33">
-            <input class="server__select-radio" id="month-6" name="period" type="radio" value="0.4">
-            <input class="server__select-radio" id="month-12" name="period" type="radio" value="0.5">
-            <label class="server__select-option" for="month-1">1 месяц</label>
-            <div class="server__select-wrap">
-              <label class="server__select-option" for="month-3">3 месяца</label>
-              <label class="server__select-option" for="month-6">6 месяцев</label>
-              <label class="server__select-option" for="month-12">12 месяцев</label>
-            </div>
+            <span class="hidden visible-xs">Период оплаты</span>
+            <span>
+              <div class="server__select-arrow"></div>
+              <div class="server__select-current"></div>
+              <div class="server__select-wrap">
+                <input class="server__select-price" type="hidden" name="start-price" value="990.00">
+                <input class="server__select-radio" id="month-1-1" name="period-1" type="radio" value="0" checked>
+                <label class="server__select-option" for="month-1-1">1 месяц</label>
+                <input class="server__select-radio" id="month-1-3" name="period-1" type="radio" value="0.33">
+                <label class="server__select-option" for="month-1-3">3 месяца</label>
+                <input class="server__select-radio" id="month-1-6" name="period-1" type="radio" value="0.4">
+                <label class="server__select-option" for="month-1-6">6 месяцев</label>
+                <input class="server__select-radio" id="month-1-12" name="period-1" type="radio" value="0.5">
+                <label class="server__select-option" for="month-1-12">12 месяцев</label>
+              </div>
+            </span>
           </div>
           <div class="cell cell-price">
-            <span class="server__price">990.00</span>
-            <span class="server__unit">руб.</span>
+            <span class="hidden visible-xs">Цена</span>
+            <span>
+              <span class="server__price">990.00</span>
+              <span class="server__unit">руб.</span>
+            </span>
+          </div>
+          <div class="cell cell-price">
             <button class="btn server__btn">Заказать</button>
           </div>
         </div>
         <!-- col-2 -->
-        <div class="col popular">
+        <div class="col server__tariff popular">
           <div class="cell caption">SINGLE</div>
-          <div class="cell">Xeon E3-1230</div>
-          <div class="cell">4x 3.3 ГГц</div>
-          <div class="cell">1</div>
-          <div class="cell">16</div>
-          <div class="cell">2х 500 ГБ</div>
-          <div class="cell">&infin;</div>
-          <div class="cell">1</div>
-          <div class="cell">50</div>
-          <div class="cell cell-period">
-            <!-- <select name="period" id="period" class="select server__select">
-              <option class="select__option server__select-option" value="0" selected>1 месяц</option>
-              <option class="select__option server__select-option" value="0.33">3 месяца</option>
-              <option class="select__option server__select-option" value="0.4">6 месяцев</option>
-              <option class="select__option server__select-option" value="0.5">12 месяцев</option>
-            </select> -->
+          <div class="cell">
+            <span class="hidden visible-xs">Процессор</span><span>Xeon E3-1230</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Количество ядер</span><span>4x 3.3 ГГц</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Количество процессоров</span><span>1</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Оперативной памяти, ГБ</span><span>16</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Жесткие диски</span><span>2х 500 ГБ</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Трафик</span><span>&infin;</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Выделенные IPv4-адреса</span><span>1</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Хранилище для бэкапов, ГБ</span><span>50</span></div>
+          <div class="cell server__select cell-period ">
+            <span class="hidden visible-xs">Период оплаты</span>
+            <span>
+              <div class="server__select-arrow"></div>
+              <div class="server__select-current"></div>
+              <div class="server__select-wrap">
+                <input class="server__select-price" type="hidden" name="start-price" value="1290.00">
+                <input class="server__select-radio" id="month-2-1" name="period-2" type="radio" value="0" checked>
+                <label class="server__select-option" for="month-2-1">1 месяц</label>
+                <input class="server__select-radio" id="month-2-3" name="period-2" type="radio" value="0.33">
+                <label class="server__select-option" for="month-2-3">3 месяца</label>
+                <input class="server__select-radio" id="month-2-6" name="period-2" type="radio" value="0.4">
+                <label class="server__select-option" for="month-2-6">6 месяцев</label>
+                <input class="server__select-radio" id="month-2-12" name="period-2" type="radio" value="0.5">
+                <label class="server__select-option" for="month-2-12">12 месяцев</label>
+              </div>
+            </span>
           </div>
           <div class="cell cell-price">
-            <span class="server__price">1290.00</span>
-            <span class="server__unit">руб.</span>
+            <span class="hidden visible-xs">Цена</span>
+            <span>
+              <span class="server__price">1290.00</span>
+              <span class="server__unit">руб.</span>
+            </span>
+          </div>
+          <div class="cell cell-price">
             <button class="btn server__btn">Заказать</button>
           </div>
         </div>
         <!-- col-3 -->
-        <div class="col">
+        <div class="col server__tariff">
           <div class="cell caption">DUAL</div>
-          <div class="cell">Xeon E3-1230</div>
-          <div class="cell">4x 3.3 ГГц</div>
-          <div class="cell">1</div>
-          <div class="cell">32</div>
-          <div class="cell">2х 500 ГБ</div>
-          <div class="cell">&infin;</div>
-          <div class="cell">1</div>
-          <div class="cell">50</div>
-          <div class="cell cell-period">
-            <!-- <select name="period" id="period" class="select server__select">
-              <option class="select__option server__select-option" value="0" selected>1 месяц</option>
-              <option class="select__option server__select-option" value="0.33">3 месяца</option>
-              <option class="select__option server__select-option" value="0.4">6 месяцев</option>
-              <option class="select__option server__select-option" value="0.5">12 месяцев</option>
-            </select> -->
+          <div class="cell">
+            <span class="hidden visible-xs">Процессор</span><span>Xeon E3-2620</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Количество ядер</span><span>16x 2.1 ГГц</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Количество процессоров</span><span>2</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Оперативной памяти, ГБ</span><span>32</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Жесткие диски</span><span>2х 500 ГБ</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Трафик</span><span>&infin;</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Выделенные IPv4-адреса</span><span>1</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Хранилище для бэкапов, ГБ</span><span>100</span></div>
+          <div class="cell server__select cell-period ">
+            <span class="hidden visible-xs">Период оплаты</span>
+            <span>
+              <div class="server__select-arrow"></div>
+              <div class="server__select-current"></div>
+              <div class="server__select-wrap">
+                <input class="server__select-price" type="hidden" name="start-price" value="1990.00">
+                <input class="server__select-radio" id="month-3-1" name="period-3" type="radio" value="0" checked>
+                <label class="server__select-option" for="month-3-1">1 месяц</label>
+                <input class="server__select-radio" id="month-3-3" name="period-3" type="radio" value="0.33">
+                <label class="server__select-option" for="month-3-3">3 месяца</label>
+                <input class="server__select-radio" id="month-3-6" name="period-3" type="radio" value="0.4">
+                <label class="server__select-option" for="month-3-6">6 месяцев</label>
+                <input class="server__select-radio" id="month-3-12" name="period-3" type="radio" value="0.5">
+                <label class="server__select-option" for="month-3-12">12 месяцев</label>
+              </div>
+            </span>
           </div>
           <div class="cell cell-price">
-            <span class="server__price">1 990.00</span>
-            <span class="server__unit">руб.</span>
+            <span class="hidden visible-xs">Цена</span>
+            <span>
+              <span class="server__price">1990.00</span>
+              <span class="server__unit">руб.</span>
+            </span>
+          </div>
+          <div class="cell cell-price">
             <button class="btn server__btn">Заказать</button>
           </div>
         </div>
         <!-- col-4 -->
-        <div class="col">
-          <div class="cell caption">DUAL+</div>
-          <div class="cell">Xeon E3-1230</div>
-          <div class="cell">4x 3.3 ГГц</div>
-          <div class="cell">1</div>
-          <div class="cell">16</div>
-          <div class="cell">2х 500 ГБ</div>
-          <div class="cell">&infin;</div>
-          <div class="cell">1</div>
-          <div class="cell">50</div>
-          <div class="cell cell-period">
-            <!-- <select name="period" id="period" class="select server__select">
-              <option class="select__option server__select-option" value="0" selected>1 месяц</option>
-              <option class="select__option server__select-option" value="0.33">3 месяца</option>
-              <option class="select__option server__select-option" value="0.4">6 месяцев</option>
-              <option class="select__option server__select-option" value="0.5">12 месяцев</option>
-            </select> -->
+        <div class="col server__tariff">
+          <div class="cell caption">DUAL</div>
+          <div class="cell">
+            <span class="hidden visible-xs">Процессор</span><span>Xeon E3-2630</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Количество ядер</span><span>20x 2.2 ГГц</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Количество процессоров</span><span>1</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Оперативной памяти, ГБ</span><span>16</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Жесткие диски</span><span>2х 500 ГБ</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Трафик</span><span>&infin;</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Выделенные IPv4-адреса</span><span>1</span></div>
+          <div class="cell">
+            <span class="hidden visible-xs">Хранилище для бэкапов, ГБ</span><span>50</span></div>
+          <div class="cell server__select cell-period ">
+            <span class="hidden visible-xs">Период оплаты</span>
+            <span>
+              <div class="server__select-arrow"></div>
+              <div class="server__select-current"></div>
+              <div class="server__select-wrap">
+                <input class="server__select-price" type="hidden" name="start-price" value="2790.00">
+                <input class="server__select-radio" id="month-4-1" name="period-4" type="radio" value="0" checked>
+                <label class="server__select-option" for="month-4-1">1 месяц</label>
+                <input class="server__select-radio" id="month-4-3" name="period-4" type="radio" value="0.33">
+                <label class="server__select-option" for="month-4-3">3 месяца</label>
+                <input class="server__select-radio" id="month-4-6" name="period-4" type="radio" value="0.4">
+                <label class="server__select-option" for="month-4-6">6 месяцев</label>
+                <input class="server__select-radio" id="month-4-12" name="period-4" type="radio" value="0.5">
+                <label class="server__select-option" for="month-4-12">12 месяцев</label>
+              </div>
+            </span>
           </div>
           <div class="cell cell-price">
-            <span class="server__price">2 790.00</span>
-            <span class="server__unit">руб.</span>
+            <span class="hidden visible-xs">Цена</span>
+            <span>
+              <span class="server__price">2790.00</span>
+              <span class="server__unit">руб.</span>
+            </span>
+          </div>
+          <div class="cell cell-price">
             <button class="btn server__btn">Заказать</button>
           </div>
         </div>
@@ -174,14 +270,14 @@
 
       <div class="server__info">
         <h4 class="server__info-title">Система скидок:</h4>
-        <p>За длительный заказ:</p>
+        <p class="server__info-p">За длительный заказ:</p>
         <ul>
-          <li>При оплате за 3 месяца - скидка 33%</li>
-          <li>При оплате за 6 месяцев - скидка 40%</li>
-          <li>При оплате за год - скидка 50%</li>
+          <li class="server__info-p">При оплате за 3 месяца - скидка 33%</li>
+          <li class="server__info-p">При оплате за 6 месяцев - скидка 40%</li>
+          <li class="server__info-p">При оплате за год - скидка 50%</li>
         </ul>
         <h4 class="server__info-title">За несколько заказов на аккаунте:</h4>
-        <p>Каждый последующий заказ получит дополнительную скидку 2000 р.</p>
+        <p class="server__info-p">Каждый последующий заказ получит дополнительную скидку 2000 р.</p>
       </div>
     </div>
 

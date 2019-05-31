@@ -1,0 +1,23 @@
+.hidden
+  display: none
+@media (max-width: $md) 
+  body
+    background-size: auto 92px 
+  +media-md-index
+  +media-md-navbar
+  +media-md-server
+  +media-md-footer 
+  +media-md-copyright
+@media (max-width: $xs) 
+  .visible-xs
+    display: block
+  .hidden-xs
+    display: none
+  +media-xs-index
+  +media-xs-navbar
+  +media-xs-server
+  +media-xs-footer 
+  +media-xs-copyright
+
+
+

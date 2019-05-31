@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   new WOW().init();
   let isMobile = true;
-     // -----Control Toggle Menu----
+  // -----Control Toggle Menu----
   let body = document.querySelector('body'),
     menu = document.querySelector('.navbar__items'),
     btnToggle = document.querySelector('.navbar__toggle');
@@ -50,13 +50,13 @@ window.addEventListener('DOMContentLoaded', function () {
     if (window.innerWidth > 660) {
       //Remove transform property from menu
       menu.style.transform = "";
-    } 
+    }
   });
 
 
   //Remove XS-Style
   let btnFullVersion = document.querySelector('.fullversion__btn');
-  btnFullVersion.addEventListener('click', function(){
+  btnFullVersion.addEventListener('click', function () {
     console.log(document.styleSheets);
     document.styleSheets[5].disabled = true;
     isMobile = false;
@@ -67,12 +67,14 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   //select period on Server
-  let selects = document.querySelectorAll('.server__select');
+
+  let selects = document.querySelectorAll('.server__select-current');
   selects.forEach(elem => {
-    elem.addEventListener('click', function(e){
-      let optionWrap = e.currentTarget.querySelector('.server__select-wrap'),
-      arrow = e.currentTarget.querySelector('.server__select-arrow');
-      if (getComputedStyle(optionWrap).display == "none"){
+    elem.addEventListener('click', function (e) {
+      console.log("currentTarget" + e.target.className);
+      let optionWrap = e.currentTarget.parentElement.querySelector('.server__select-wrap'),
+        arrow = e.currentTarget.parentElement.querySelector('.server__select-arrow');
+      if (getComputedStyle(optionWrap).display == "none") {
         optionWrap.style.display = "block";
         arrow.style.transform = "rotate(180deg)";
       } else {
@@ -81,20 +83,28 @@ window.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-  
+
+
+
   let optionWraps = document.querySelectorAll('.server__select-wrap');
-
-  optionWraps.forEach(wrap => {
-    wrap.addEventListener('click', function(e){
-      let select = this.parentElement;
-      let currOpt = this.previousElementSibling;
+  let currOpt = document.querySelectorAll('.server__select-current');
+  
+  for (let i = 0; i < optionWraps.length; i++) {
+    currOpt[i].textContent = optionWraps[i].querySelector('.server__select-radio[checked=""]+.server__select-option').textContent;
+    optionWraps[i].addEventListener('click', function (e) {
+      let currCol = parentsOfElements(this, 'col');
+      let currSelect = currCol.querySelector('.server__select-current');
+      let currStartPrice = currCol.querySelector('input[name="start-price"]');
+      let currPrice = currCol.querySelector('.server__price');
+      let currWrap = e.currentTarget;
       let target = e.target;
-
-      if(target && target.tagName == "LABEL"){
-        wrap.insertBefore(currOpt, target);
-        select.insertBefore(target, wrap);
+      if (target && target.tagName == "LABEL") {
+        currSelect.textContent = target.textContent;
+        currPrice.textContent = (+currStartPrice.value * (1 - +target.previousElementSibling.value)).toFixed(2);
+        currWrap.style.display = "none";
+        currWrap.parentElement.querySelector('.server__select-arrow').style.transform = "";
       };
-    })
-  });
+    });
+  };
 
 });
