@@ -75,6 +75,12 @@ window.addEventListener('DOMContentLoaded', function () {
 
   let optionWraps = document.querySelectorAll('.server__select-wrap');
   let currOpt = document.querySelectorAll('.server__select-current');
+  let priceObj = {
+    1: 0,
+    3: 0.33,
+    6: 0.4,
+    12: 0.5
+  }
 
   for (let i = 0; i < optionWraps.length; i++) {
     currOpt[i].textContent = optionWraps[i].querySelector('.server__select-radio[checked=""]+.server__select-option').textContent;
@@ -87,7 +93,7 @@ window.addEventListener('DOMContentLoaded', function () {
       let target = e.target;
       if (target && target.tagName == "LABEL") {
         currSelect.textContent = target.textContent;
-        currPrice.textContent = (+currStartPrice.value * (1 - +target.previousElementSibling.value)).toFixed(2);
+        currPrice.textContent = (+currStartPrice.value * (1 - priceObj[target.previousElementSibling.value])*target.previousElementSibling.value).toFixed(2);
         currWrap.style.display = "none";
         currWrap.parentElement.querySelector('.server__select-arrow').style.transform = "";
       };
