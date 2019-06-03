@@ -1,0 +1,15 @@
+@import 'modules/vars'
+@import 'modules/mixins'
+@import 'modules-error/mixins-error'
+
+@media (max-width: $xs) 
+  .visible-xs
+    display: block
+  .hidden-xs
+    display: none
+  +media-xs-interface
+  +media-xs-index
+  +media-xs-navbar
+  +media-xs-error
+  +media-xs-footer 
+  +media-xs-copyright
