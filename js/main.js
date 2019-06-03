@@ -47,7 +47,8 @@ window.addEventListener('DOMContentLoaded', function () {
   //Remove XS-Style
   let btnFullVersion = document.querySelector('.fullversion__btn');
   btnFullVersion.addEventListener('click', function () {
-    document.styleSheets[5].disabled = true;
+    console.log(document.styleSheets);
+    document.styleSheets[4].disabled = true;
     isMobile = false;
     document.body.style.width = "760px";
     document.body.style.overflowX = "visible";
