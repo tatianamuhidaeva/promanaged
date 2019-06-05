@@ -55,8 +55,10 @@ window.addEventListener('DOMContentLoaded', function () {
     });
     let styles = document.styleSheets;
     for (let i = 0; i < styles.length; i++){
-      if (styles[i].href.indexOf('media-xs') > 0) {
-        styles[i].disabled = true;
+      if(styles[i].href){
+        if (styles[i].href.indexOf('media-xs') > 0) {
+          styles[i].disabled = true;
+        }
       }
     }
     isMobile = false;
