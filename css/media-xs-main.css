@@ -272,8 +272,6 @@
   .benefit__uptime-iframe {
     width: 310px;
     height: 202px;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
   }
@@ -372,8 +370,11 @@
     -webkit-transform: none;
             transform: none;
   }
+  .benefit:nth-of-type(2n) {
+    padding-right: 0;
+  }
   .benefit:nth-of-type(2n) .benefit__sentence {
-    margin-left: 0;
+    margin: 0;
   }
   .benefit:nth-of-type(2n)::after {
     left: 0;

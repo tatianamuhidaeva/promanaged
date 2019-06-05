@@ -53,10 +53,12 @@ window.addEventListener('DOMContentLoaded', function () {
       elem.style.animation = "none";
       elem.classList.remove('wow');
     });
-    console.log(document.styleSheets);
-    document.styleSheets[4].disabled = true; //media-xs.css
-    // document.styleSheets[2].disabled = true; //animated.css
-    
+    let styles = document.styleSheets;
+    for (let i = 0; i < styles.length; i++){
+      if (styles[i].href.indexOf('media-xs') > 0) {
+        styles[i].disabled = true;
+      }
+    }
     isMobile = false;
     document.body.style.width = "760px";
     document.body.style.overflowX = "visible";
