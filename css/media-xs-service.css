@@ -323,22 +323,5 @@
     height: 20px;
     background-size: 20px;
   }
-  .popup-wrap {
-    padding: 25px 20px;
-    width: 280px;
-  }
-  .popup__title {
-    margin-bottom: 30px;
-  }
-  .popup__warm {
-    font-size: 10px;
-    text-align: center;
-  }
-  .popup__input {
-    width: 220px;
-  }
-  .popup__btn {
-    width: 150px;
-  }
 }
 /*# sourceMappingURL=media-xs-service.css.map */
