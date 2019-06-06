@@ -505,6 +505,11 @@ template {
           box-sizing: border-box;
 }
 
+.page {
+  position: relative;
+  overflow: hidden;
+}
+
 body {
   font-family: 'SFUIDisplay-Regular' , sans-serif;
   background-color: #ffffff;
